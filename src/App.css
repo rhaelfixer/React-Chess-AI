@@ -1,38 +1,363 @@
-.App {
+body {
+  background-color: BlanchedAlmond;
+}
+
+
+/* =============== Container =============== */
+.chess-CSS {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-CSS {
+  margin: 50px 0px 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chessboard-CSS {
+  width: 800px;
+  display: grid;
+  grid-template-rows: repeat(8, 100px);
+  outline: solid black;
+  margin: auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.row-CSS {
+  flex-direction: row;
+}
+
+.box-CSS {
+  display: "flex";
+  width: 100px;
+  height: 100px;
+  border: solid black;
+  box-sizing: border-box;
+  background-color: rgb(254, 206, 161);
+}
+
+.row-CSS:nth-child(2n + 1) .box-CSS:nth-child(2n) {
+  background-color: rgb(208, 139, 76);
+}
+.row-CSS:nth-child(2n) .box-CSS:nth-child(2n + 1) {
+  background-color: rgb(208, 139, 76);
+}
+
+.img-piece-CSS {
+  height: 100%;
+  margin: auto;
+}
+
+.h5-copyright-CSS {
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  margin: 25px 0px 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+
+/* =============== Media Queries =============== */
+
+/* =============== Mobile View =============== */
+@media only screen and (250px <= width <= 425px) {
+  /* Container */
+  .header-CSS {
+    width: 450px;
+    margin: 25px -1.6% 0px;
   }
-  to {
-    transform: rotate(360deg);
+
+  .chessboard-CSS {
+    width: 450px;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: 15px -1.6%;
+  }
+
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    width: 450px;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+
+
+@media only screen and (426px <= width <= 499px) {
+  /* Container */
+  .header-CSS {
+    width: 100%;
+    margin: 25px 0px 0px;
+  }
+
+  .chessboard-CSS {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: 15px 0px;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+
+
+@media only screen and (500px <= width <= 550px) {
+  /* Container */
+  .header-CSS {
+    width: 100%;
+    margin: 25px 0px 0px;
+  }
+
+  .chessboard-CSS {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: 15px 0px;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+
+
+@media only screen and (600px <= width <= 650px) {
+  /* Container */
+  .header-CSS {
+    width: 100%;
+    margin: 25px 0px 0px;
+  }
+
+  .chessboard-CSS {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: 15px 0px;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+
+
+@media only screen and (710px <= width <= 767px) {
+  /* Container */
+  .header-CSS {
+    width: 100%;
+    margin: 25px 0px 0px;
+  }
+
+  .chessboard-CSS {
+    width: 100%;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: 15px 0px;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+  }
+}
+
+
+
+/* =============== Tablet View =============== */
+@media only screen and (768px <= width <= 1023px) {
+  /* Container */
+  .header-CSS {
+    margin: 25px 0px 15px;
+  }
+
+  .chessboard-CSS {
+    width: 600px;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: auto;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    justify-content: center;
+    align-items: center;
+    margin: 15px 0px 25px;
+  }
+}
+
+
+
+@media only screen and (1024px <= width <= 1120px) {
+  /* Container */
+  .header-CSS {
+    margin: 50px 0px 25px;
+  }
+
+  .chessboard-CSS {
+    width: 800px;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: auto;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px 50px;
+  }
+}
+
+
+
+@media only screen and (1121px <= width <= 1910px) {
+  /* Container */
+  .header-CSS {
+    margin: 50px 0px 25px;
+  }
+
+  .chessboard-CSS {
+    width: 800px;
+    display: grid;
+    grid-template-rows: repeat(8, 50px);
+    outline: 1px solid black;
+    margin: auto;
+  }
+
+  .box-CSS {
+    display: "flex";
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    background-color: rgb(254, 206, 161);
+  }
+
+  .img-piece-CSS {
+    height: 100%;
+    margin: 0px;
+  }
+
+  .h5-copyright-CSS {
+    justify-content: center;
+    align-items: center;
+    margin: 25px 0px 50px;
   }
 }

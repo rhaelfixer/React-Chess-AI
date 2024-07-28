@@ -300,7 +300,7 @@ const Board = () => {
   return (
     <div>
       <div className="header-CSS">
-        <h1>React Chess</h1>
+        <h1>React Chess AI</h1>
         <Button variant="dark" onClick={resetGame}>
           Reset
         </Button>
